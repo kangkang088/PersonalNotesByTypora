@@ -19,10 +19,10 @@ Unity 官方论坛，一个不用搜索，可以直接问的地方
 7.[Unity 中文课堂](https://learn.u3d.cn/)
 Unity 中文课堂，讲解 Unity 相关的各类知识，质量很高。
 
-\8. [泰课在线](https://www.taikr.com/)
+8.泰课在线](https://www.taikr.com/)
 国内专业的 Unity3D、VR 专业视频学习平台，上千门实时更新课程，供学员在线观看，为国内开发者提供最新、最全、最快的视频学习教程。
 
-\9. [幻想社区](https://www.fantsida.com/)
+9.[幻想社区](https://www.fantsida.com/)
 新锐的专业游戏开发者交流社区
 
 10.[C# 微软官方文档](https://learn.microsoft.com/zh-cn/dotnet/csharp/tour-of-csharp/)
@@ -37,7 +37,7 @@ Unity 中文课堂，讲解 Unity 相关的各类知识，质量很高。
 13.[siki 学院 C#](https://www.sikiedu.com/)
 这是 siki 学院的 C# 视频公开，也是针对基础用户进行学习的，也有 Unity 基础的视频课，目前也一直是可以免费观看的。
 
-\14. [慕课网 C#](https://www.imooc.com/course/list?c=csharp)
+14.[慕课网 C#](https://www.imooc.com/course/list?c=csharp)
 同样也是视频公开课，慕课网的会比上面 siki 学院课时更多一点，内容也多了一点，也可有对比性的去学习观看。
 
 15.[CG 织梦网](http://www.cgdream.com.cn/)
