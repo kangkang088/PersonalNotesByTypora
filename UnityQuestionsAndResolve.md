@@ -71,4 +71,77 @@ public class GenerateButton : MonoBehaviour
 
                             版权声明：本文为博主原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。
 
-原文链接：https://blog.csdn.net/wang568270833/article/details/114293129
+转载自：[解决Unity UGUI滑动组件自动回弹的问题_unity 滑动列表取消回弹-CSDN博客](https://blog.csdn.net/wang568270833/article/details/114293129)
+
+## 3.VideoPlayer（视频播放组件）添加进度条，并可进行拖动控制视频播放进度
+
+```c#
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Video;
+using UnityEngine.EventSystems;
+/// <summary>
+/// 将此脚本挂载在Slider上，可以实现视频滑动条效果
+/// </summary>
+public class VideoController : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
+{
+    public VideoPlayer m_player;
+    public Slider m_slider;
+    public bool m_bMouseUp = true;
+    void Start()
+    {
+        m_slider.onValueChanged.AddListener((float value) =>
+        {
+            if (!m_bMouseUp)
+            {
+                SliderEvent(value);
+            }
+        });
+    }
+
+// 如果启用 MonoBehaviour，则每个固定帧速率的帧都将调用此函数
+private void FixedUpdate()
+{
+    if (m_bMouseUp)
+    {
+        m_slider.value = m_player.frame / (m_player.frameCount * 1.0f);
+    }
+}
+
+public void PointerDown()
+{
+    m_player.Pause();
+    m_bMouseUp = false;
+}
+
+public void PointerUp()
+{
+    m_player.Play();
+    m_bMouseUp = true;
+}
+
+public void SliderEvent(float value)
+{
+    m_player.frame = long.Parse((value * m_player.frameCount).ToString("0."));
+}
+
+public void OnPointerUp(PointerEventData eventData)
+{
+    PointerUp();
+}
+
+public void OnPointerDown(PointerEventData eventData)
+{
+    PointerDown();
+}
+
+}
+```
+
+转载自：[在unity当中为VedioPlayer（视频播放组件）添加进度条，并且可以进行拖动_unity videoplayer 进度条-CSDN博客](https://blog.csdn.net/YTL2859447874/article/details/134455414)
+
+## 4.打包到移动端，运行后模型闪面问题
+
+打包问题：勾选PlayerSettings->OtherSettings->AutoGraphicAPI
+
+其他问题：请参照网上
